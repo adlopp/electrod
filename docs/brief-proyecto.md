@@ -46,7 +46,7 @@ a la cautela genérica de antes.
 ## Pendiente de confirmar con el amigo — resuelto vs. abierto
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 1 | Nombre fiscal / autónomo y NIF (aviso legal) | **Abierto** — no lo sabe. El aviso legal se publica con `[PENDIENTE: NIF y nombre fiscal]` hasta tenerlo; no se puede lanzar a producción sin cerrarlo (obligatorio por LSSI). |
+| 1 | Nombre fiscal / autónomo y NIF (aviso legal) | **Parcialmente resuelto** — según factura de Wix (8 jun 2026, #1244634347), el titular de la cuenta es **David Lechuga Campoy / Acotados Construccion SL**, Calle Aguado 14, 18009 Granada (Andalucía, España). Falta aún el **NIF/CIF** para poder cerrar el aviso legal — el resto de datos ya se pueden usar. |
 | 2 | ¿Dirección física o domicilio sin local? | **Resuelto** — domicilio sin local, servicio a domicilio. |
 | 3 | ¿Son suyas las fotos? | **Resuelto (con matiz)** — probablemente generadas con IA/catálogo. Ver aviso arriba. |
 | 4 | ¿WhatsApp Business? | **Resuelto** — no tiene. No poner CTA de WhatsApp, solo llamada. |
@@ -60,9 +60,19 @@ a la cautela genérica de antes.
 | 12 | Repo/DNS | **Parcialmente resuelto** — repo destino: `https://github.com/adlopp/electrod.git`. Dónde está registrado el dominio para tocar el DNS: **aún no se sabe**, pendiente para la Fase 5 (Lanzamiento). |
 
 Puntos que siguen realmente abiertos y bloquean algo antes del lanzamiento:
-**NIF/nombre fiscal** (bloquea el aviso legal) y **dónde está registrado el
-dominio** (bloquea apuntar el DNS). El resto ya no bloquea el trabajo de
-estrategia/contenido/diseño, que puede arrancar.
+**NIF/CIF** (bloquea el aviso legal, ya tenemos el resto de datos del titular)
+y **dónde está registrado el dominio** (bloquea apuntar el DNS — la factura de
+Wix del 8 jun 2026 solo incluye el "Plan Premium Light", sin línea de dominio,
+así que probablemente `electrod.es` esté registrado fuera de Wix; falta
+confirmarlo mirando la sección "Dominios" del panel de Wix). El resto ya no
+bloquea el trabajo de estrategia/contenido/diseño, que puede arrancar.
+
+## Titular / datos fiscales (para el aviso legal)
+Según factura de Wix #1244634347 (8 jun 2026 – 8 jun 2027, Plan Premium Light,
+168 € + 21% IVA = 203,28 €):
+- **Nombre/razón social:** David Lechuga Campoy / Acotados Construccion SL
+- **Dirección:** Calle Aguado 14, 18009 Granada, Andalucía, España
+- **NIF/CIF:** pendiente — único dato que falta para cerrar el aviso legal.
 
 Ningún agente debe inventar respuestas a lo que sigue abierto: debe marcarlo
 como pendiente en su entrega en vez de rellenarlo.
