@@ -34,22 +34,14 @@ Plan completo de referencia:
 - **Zona de servicio:** Granada capital + área metropolitana. Confirmados de entrada: Granada, Albolote, Armilla, Maracena, La Zubia, Las Gabias, Ogíjares, Peligros. Lista **ampliable** — no cerrada, tratar como "y alrededores" en el copy para no limitar el área real.
 - **Redes:** Instagram — https://www.instagram.com/instalaciones_electrod/
 
-## ⚠️ Importante — origen de las imágenes
-El amigo cree que las fotos actuales de "Trabajos realizados" **están generadas
-con IA / son de catálogo**, no fotos reales de sus instalaciones. Implicaciones
-para todos los agentes:
-- `redactor-contenido`: no describir estas imágenes como "nuestros trabajos
-  reales" ni construir testimonios/pies de foto que afirmen que son instalaciones
-  hechas por ElectroD. Usarlas como *ambientación* del tipo de resultado que se
-  ofrece, dejándolo claro o al menos sin afirmar autoría (ej. "Así de limpio
-  queda un cuadro eléctrico bien instalado" en vez de "Instalación realizada por
-  nuestro equipo en Granada").
-- `especialista-seo-local`: el `schema.org` `ImageObject`/galería no debe
-  vincular estas imágenes a reseñas o testimonios reales; evitar cualquier
-  marcado que implique autoría verificable (riesgo de señales falsas de E-E-A-T).
-- Objetivo a medio plazo (Fase 6, post-lanzamiento): sustituir progresivamente
-  por fotos reales de trabajos cuando el amigo las tenga — dejar la galería
-  fácil de actualizar por el desarrollador.
+## Origen de las imágenes — confirmado
+Actualización 2026-09-14: se confirma que las 14 fotos de "Trabajos realizados"
+son instalaciones reales hechas por ElectroD (no IA/catálogo, corrigiendo la
+duda inicial). A partir de ahora `redactor-contenido` y `especialista-seo-local`
+pueden describirlas y marcarlas (`schema.org` `ImageObject`, alt text, pies de
+foto) como trabajo propio sin matices. Si en algún momento se detecta que
+alguna imagen concreta no lo es, hay que corregir esa pieza puntual, no volver
+a la cautela genérica de antes.
 
 ## Pendiente de confirmar con el amigo — resuelto vs. abierto
 | # | Pregunta | Respuesta |
