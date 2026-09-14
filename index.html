@@ -412,11 +412,23 @@
     border-radius:999px;
     background:var(--surface);
     border:1px solid var(--line);
+    color:var(--ink);
+    transition:background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .chip:hover{
+    background:var(--amber);
+    border-color:var(--amber);
+    color:var(--amber-ink);
   }
   .chip.main{
     background:var(--ink);
     color:var(--paper);
     border-color:var(--ink);
+  }
+  .chip.main:hover{
+    background:var(--amber-deep);
+    border-color:var(--amber-deep);
+    color:var(--amber-ink);
   }
 
   /* about */
