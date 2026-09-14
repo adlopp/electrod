@@ -15,11 +15,6 @@
     --amber:#dd9636;
     --amber-deep:#a86a1c;
     --amber-ink:#1c1204;
-    --brand-navy:#0d131c;
-    --brand-navy-2:#182231;
-    --brand-ink:#eef1f6;
-    --brand-ink-soft:#a9b3c4;
-    --brand-line:#2a3547;
     --shadow: 0 18px 40px -22px rgba(13,19,28,.35);
     --radius: 14px;
   }
@@ -112,12 +107,12 @@
 
   /* ---------- header ---------- */
   header{
-    background:var(--brand-navy);
-    color:var(--brand-ink);
+    background:var(--surface-2);
+    color:var(--ink);
     position:sticky;
     top:0;
     z-index:20;
-    border-bottom:1px solid var(--brand-line);
+    border-bottom:1px solid var(--line);
   }
   .nav{
     display:flex;
@@ -136,14 +131,14 @@
     margin:0;
     padding:0;
   }
-  .nav-links a{text-decoration:none;color:var(--brand-ink-soft);transition:color .15s;}
-  .nav-links a:hover{color:var(--brand-ink);}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);transition:color .15s;}
+  .nav-links a:hover{color:var(--ink);}
   .nav-actions{display:flex;align-items:center;gap:14px;}
   .phone-link{
     font-family:"IBM Plex Mono",monospace;
     font-size:.92rem;
     font-weight:600;
-    color:var(--brand-ink);
+    color:var(--ink);
     text-decoration:none;
     white-space:nowrap;
   }
@@ -155,13 +150,13 @@
     width:38px;
     height:38px;
     border-radius:50%;
-    border:1px solid var(--brand-line);
+    border:1px solid var(--line);
     background:transparent;
-    color:var(--brand-ink);
+    color:var(--ink);
     cursor:pointer;
     flex:none;
   }
-  .theme-toggle:hover{border-color:var(--brand-ink-soft);}
+  .theme-toggle:hover{border-color:var(--ink-soft);}
   .theme-toggle svg{width:18px;height:18px;}
   .theme-toggle .icon-moon{display:none;}
   :root[data-theme="dark"] .theme-toggle .icon-sun{display:none;}
@@ -187,15 +182,15 @@
   .btn-amber:hover{background:var(--amber-deep);}
   .btn-ghost{
     background:transparent;
-    color:var(--brand-ink);
-    border-color:var(--brand-line);
+    color:var(--ink);
+    border-color:var(--line);
   }
-  .btn-ghost:hover{border-color:var(--brand-ink-soft);}
+  .btn-ghost:hover{border-color:var(--ink-soft);}
 
   /* ---------- hero ---------- */
   .hero{
-    background:var(--brand-navy);
-    color:var(--brand-ink);
+    background:var(--surface-2);
+    color:var(--ink);
   }
   .hero-grid{
     display:grid;
@@ -213,7 +208,7 @@
   .hero-sub{
     margin-top:20px;
     max-width:46ch;
-    color:var(--brand-ink-soft);
+    color:var(--ink-soft);
     font-size:1.06rem;
   }
   .hero-cta{
@@ -227,7 +222,7 @@
   .hero-visual .frame{
     border-radius:var(--radius);
     overflow:hidden;
-    border:1px solid var(--brand-line);
+    border:1px solid var(--line);
     box-shadow:var(--shadow);
   }
   .hero-visual img{width:100%;height:440px;object-fit:cover;}
@@ -378,9 +373,9 @@
     border:1px solid var(--line);
   }
   .chip.main{
-    background:var(--brand-navy);
-    color:var(--brand-ink);
-    border-color:var(--brand-navy);
+    background:var(--ink);
+    color:var(--paper);
+    border-color:var(--ink);
   }
 
   /* about */
@@ -418,8 +413,8 @@
 
   /* contact / footer */
   footer{
-    background:var(--brand-navy);
-    color:var(--brand-ink);
+    background:var(--surface-2);
+    color:var(--ink);
   }
   .contact{padding:72px 24px 40px;}
   .contact-grid{
@@ -428,30 +423,30 @@
     gap:56px;
   }
   .contact h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;}
-  .contact-lead{color:var(--brand-ink-soft);margin-top:14px;max-width:44ch;}
+  .contact-lead{color:var(--ink-soft);margin-top:14px;max-width:44ch;}
   .contact-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;}
   .contact-card{
-    background:var(--brand-navy-2);
-    border:1px solid var(--brand-line);
+    background:var(--surface);
+    border:1px solid var(--line);
     border-radius:var(--radius);
     padding:24px;
   }
-  .contact-card .spec-row{border-bottom:1px solid var(--brand-line);padding:10px 0;}
+  .contact-card .spec-row{border-bottom:1px solid var(--line);padding:10px 0;}
   .contact-card .spec-row:last-child{border-bottom:none;}
-  .contact-card .k{color:var(--brand-ink-soft);}
-  .contact-card .v{color:var(--brand-ink);}
-  .contact-card .v a{text-decoration:none;color:var(--brand-ink);}
+  .contact-card .k{color:var(--ink-soft);}
+  .contact-card .v{color:var(--ink);}
+  .contact-card .v a{text-decoration:none;color:var(--ink);}
   .contact-card .v a:hover{color:var(--amber);}
 
   .foot-bottom{
-    border-top:1px solid var(--brand-line);
+    border-top:1px solid var(--line);
     padding:20px 24px 28px;
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
     gap:12px;
     font-size:.78rem;
-    color:var(--brand-ink-soft);
+    color:var(--ink-soft);
   }
 
   /* ---------- whatsapp flotante ---------- */
