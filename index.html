@@ -148,6 +148,25 @@
     white-space:nowrap;
   }
 
+  .theme-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid var(--brand-line);
+    background:transparent;
+    color:var(--brand-ink);
+    cursor:pointer;
+    flex:none;
+  }
+  .theme-toggle:hover{border-color:var(--brand-ink-soft);}
+  .theme-toggle svg{width:18px;height:18px;}
+  .theme-toggle .icon-moon{display:none;}
+  :root[data-theme="dark"] .theme-toggle .icon-sun{display:none;}
+  :root[data-theme="dark"] .theme-toggle .icon-moon{display:block;}
+
   .btn{
     display:inline-flex;
     align-items:center;
@@ -481,6 +500,17 @@
   }
 </style>
 
+<script>
+  (function(){
+    var theme = "light";
+    try {
+      var saved = localStorage.getItem("electrod-theme");
+      if (saved === "light" || saved === "dark") theme = saved;
+    } catch (e) {}
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+
 <div class="preview-banner">VISTA PREVIA · maqueta de ejemplo para revisar el diseño, aún no es la web definitiva</div>
 
 <header>
@@ -493,6 +523,10 @@
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
       <a class="phone-link" href="tel:+34622735199">622 735 199</a>
       <a class="btn btn-amber" href="tel:+34622735199">Llamar ahora</a>
     </div>
@@ -678,3 +712,24 @@
 <a class="whatsapp-float" href="https://wa.me/34622735199?text=Hola%20ElectroD%2C%20me%20gustar%C3%ADa%20consultar%20una%20instalaci%C3%B3n%20el%C3%A9ctrica" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a ElectroD">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.13h-.01c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.35c0-4.51 3.67-8.19 8.19-8.19 2.19 0 4.25.85 5.79 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.51-3.67 8.18-8.18 8.18zm4.48-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
 </a>
+
+<script>
+  (function(){
+    var btn = document.getElementById("themeToggle");
+    if (!btn) return;
+    function current(){
+      return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    }
+    function reflect(theme){
+      btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+      btn.setAttribute("aria-label", theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
+    }
+    reflect(current());
+    btn.addEventListener("click", function(){
+      var next = current() === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      reflect(next);
+      try { localStorage.setItem("electrod-theme", next); } catch (e) {}
+    });
+  })();
+</script>
