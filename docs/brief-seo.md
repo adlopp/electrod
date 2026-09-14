@@ -14,10 +14,10 @@ del plan)._
 - `/servicios/iluminacion-led/`
 - `/servicios/mantenimiento/`
 
-**Zonas** `/zonas/…`
+**Zonas** `/zonas/…` — confirmados con el amigo (ver `docs/brief-proyecto.md`):
 - `/zonas/granada/`
-- `/zonas/armilla/`, `/zonas/maracena/`, `/zonas/la-zubia/`, `/zonas/las-gabias/`, `/zonas/ogijares/`, `/zonas/peligros/`
-  _(confirmar municipios exactos — ver `docs/brief-proyecto.md`, pendiente 9)_
+- `/zonas/albolote/`, `/zonas/armilla/`, `/zonas/maracena/`, `/zonas/la-zubia/`, `/zonas/las-gabias/`, `/zonas/ogijares/`, `/zonas/peligros/`
+  _(lista ampliable — no cerrada; el copy debe evitar sonar limitado a estos municipios)_
 
 **Resto**
 - `/` · `/trabajos-realizados/` · `/sobre-nosotros/` · `/contacto/` · `/blog/`
