@@ -1,4 +1,4 @@
-# Web de ElectroD (en construcción)
+# Web de ElectroD (en construcción, no lanzado aún con la nueva versión)
 
 Reconstrucción de https://www.electrod.es/ como sitio estático (Astro),
 desplegado gratis en GitHub Pages, con foco en SEO local para Granada.
